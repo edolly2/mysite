@@ -5,6 +5,26 @@
     @import url(https://fonts.googleapis.com/css2?family=#{$font});
 }
 
+@mixin bold {
+    font-weight: bold;
+}
+// CENTER
+
+@mixin center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin center-slider {
+    position: absolute;
+    left: 57%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+
 // MEDIA QS
 
 @mixin tiny-screens() {
@@ -14,13 +34,13 @@
 }
 
 @mixin small-screens() {
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 880px) {
         @content;
     }
 }
 
 @mixin medium-screens() {
-    @media only screen and (max-width: 680px) {
+    @media only screen and (min-width: 881px) {
         @content;
     }
 }
@@ -29,4 +49,46 @@
     @media only screen and (max-width: 960px) {
         @content;
     }
+}
+
+// HERO
+
+@mixin hero {
+    background-image: $hero;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+// HIDDEN
+
+@mixin hidden {
+    display: none;
+}
+
+// OVERLAY
+
+@mixin overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+// SHADOWS
+// SHADOW
+@mixin box-shadow-black {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+@mixin box-shadow-gray {
+    box-shadow: 5px 5px 10px rgba(165, 165, 165, 0.6);
+}
+
+
+@mixin text-shadow-black {
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+}
+
+@mixin text-shadow-gray {
+    text-shadow: 3px 3px 5px rgb(165, 165, 165);
 }

@@ -2,11 +2,19 @@
 $background-color-main: rgb(0, 0, 63);
 $background-color-header: rgb(136, 17, 17);
 $background-color-footer: rgb(136, 17, 17);
-$text-color: rgb(196, 176, 90);
-$headline-color: rgb(165, 165, 165);
+$headline-color: rgb(110, 194, 196);
+$nav-text-color: rgb(255, 255, 255);
 // FONTS
 $headline-font: "Montserrat";
 $text-font: "Roboto";
+
+// FONT SIZE
+
+$small-font: 16px;
+$medium-font: 24px;
+$large-font: 30px;
+$xlarge-font: 36px;
+
 // FONT OUTLINE
 $blue-outline: 2px 2px 2px rgb(0, 0, 63), -2px 2px 2px rgb(0, 0, 63), 2px -2px 2px rgb(0, 0, 63), 1px 2px 2px rgb(0, 0, 63), 2px 1px 2px rgb(0, 0, 63), -1px 2px 2px rgb(0, 0, 63), 2px -1px 2px rgb(0, 0, 63), 1px -2px 2px rgb(0, 0, 63), -2px 1px 2px rgb(0, 0, 63), -1px -2px 2px rgb(0, 0, 63), -2px -1px 2px rgb(0, 0, 63), 1px 1px 2px rgb(0, 0, 63), -1px -1px 2px rgb(0, 0, 63), -1px 1px 2px rgb(0, 0, 63), 1px -1px 2px rgb(0, 0, 63), 0px 2px 2px rgb(0, 0, 63), 2px 0px 2px rgb(0, 0, 63), -2px 0px 2px rgb(0, 0, 63), 0px -2px 2px rgb(0, 0, 63), 0px 1px 2px rgb(0, 0, 63), 1px 0px 2px rgb(0, 0, 63), 0px -1px 2px rgb(0, 0, 63), -1px 0px 2px rgb(0, 0, 63), 0px 0px 2px rgb(0, 0, 63);
 
@@ -19,16 +27,24 @@ $black-outline: 2px 2px 2px rgb(0, 0, 0), -2px 2px 2px rgb(0, 0, 0), 2px -2px 2p
 
 $white-outline: 2px 2px 2px rgb(255, 255, 255), -2px 2px 2px rgb(255, 255, 255), 2px -2px 2px rgb(255, 255, 255), 1px 2px 2px rgb(255, 255, 255), 2px 1px 2px rgb(255, 255, 255), -1px 2px 2px rgb(255, 255, 255), 2px -1px 2px rgb(255, 255, 255), 1px -2px 2px rgb(255, 255, 255), -2px 1px 2px rgb(255, 255, 255), -1px -2px 2px rgb(255, 255, 255), -2px -1px 2px rgb(255, 255, 255), 1px 1px 2px rgb(255, 255, 255), -1px -1px 2px rgb(255, 255, 255), -1px 1px 2px rgb(255, 255, 255), 1px -1px 2px rgb(255, 255, 255), 0px 2px 2px rgb(255, 255, 255), 2px 0px 2px rgb(255, 255, 255), -2px 0px 2px rgb(255, 255, 255), 0px -2px 2px rgb(255, 255, 255), 0px 1px 2px rgb(255, 255, 255), 1px 0px 2px rgb(255, 255, 255), 0px -1px 2px rgb(255, 255, 255), -1px 0px 2px rgb(255, 255, 255), 0px 0px 2px rgb(255, 255, 255);
 
-// SHADOW
-$text-shadow: 3px 3px 5px rgb(0, 0, 0);
-$box-shadow: 5px 5px 10px rgb(0, 0, 0);
+
 
 // BORDER RADIUS
 $radius-6: 6px;
 $radius-8: 8px;
 $radius-12: 12px;
 
+
 // BORDER
-$white-border: 2px solid rgb(255, 255, 255);
-$gray-border: 2px solid rgb(165, 1665, 165);
-$black-border: 2px solid rgb(0, 0, 0);
+$white-border: 1px solid rgb(255, 255, 255);
+$gray-border: 1px solid rgb(165, 165, 165);
+$black-border: 1px solid rgb(0, 0, 0);
+
+
+
+
+// IMAGES
+$hero: url("../../assets/images/webdev.jpg");
+$logo: url("../../assets/images/dhilogo.png");
+
+

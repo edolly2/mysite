@@ -2,3 +2,108 @@
 @import "partials/variables";
 @include google-font("Roboto");
 @include google-font("Montserrat");
+
+body {
+    overflow-y: auto;
+    
+}
+
+a {
+    text-decoration: none;
+    color: $nav-text-color;
+}
+
+aside {
+    @include overlay;
+    border-right: $gray-border;
+    @include box-shadow-black;
+    width: 175px;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+}
+
+.list-item {
+    padding: 10px 0;
+    color: $nav-text-color;
+    text-shadow: $blue-outline;
+}
+
+.list-item a {
+    font-size: $medium-font;
+    &:hover {
+        text-decoration: underline;
+        font-size: ($medium-font * 1.2);
+    }
+}
+
+
+.title-container {
+    @include small-screens {
+        width: 175px;
+        .title {
+            font-size: $large-font;
+        }
+    }
+    @include medium-screens {
+        width: 250px;
+        .title {
+            font-size: $xlarge-font;
+        }
+    }
+    
+}
+
+.logo-container {
+    background-image: $logo;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    color: $headline-color;
+    @include bold;
+    margin-top: 0;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+.hero {
+    @include hero;
+}
+
+.slider-container {
+    @include center-slider;
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    border-radius: $radius-6;
+    text-align: center;
+    font-size: $xlarge-font;
+}
+
+.slider-1 {
+    
+}
+
+.slider-2 {
+    @include hidden;
+}
+
+.slider-3 {
+    @include hidden;
+}
+
+.shield {
+    padding-left: 10px;
+    display: inline;
+    text-decoration: none;
+    
+}
+.hide-shield {
+    display: none;
+
+}
