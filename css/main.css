@@ -41,13 +41,14 @@ aside {
   text-shadow: 2px 2px 2px #00003f, -2px 2px 2px #00003f, 2px -2px 2px #00003f, 1px 2px 2px #00003f, 2px 1px 2px #00003f, -1px 2px 2px #00003f, 2px -1px 2px #00003f, 1px -2px 2px #00003f, -2px 1px 2px #00003f, -1px -2px 2px #00003f, -2px -1px 2px #00003f, 1px 1px 2px #00003f, -1px -1px 2px #00003f, -1px 1px 2px #00003f, 1px -1px 2px #00003f, 0px 2px 2px #00003f, 2px 0px 2px #00003f, -2px 0px 2px #00003f, 0px -2px 2px #00003f, 0px 1px 2px #00003f, 1px 0px 2px #00003f, 0px -1px 2px #00003f, -1px 0px 2px #00003f, 0px 0px 2px #00003f, 3px 3px 5px black;
 }
 
-.list-item a {
-  font-size: 24px;
-}
 .list-item a:hover {
   text-decoration: underline;
   font-size: 28.8px;
   color: #e4bf00;
+}
+
+.nav-font-size {
+  font-size: 24px;
 }
 
 .title-container {
@@ -123,12 +124,17 @@ header h1 {
   color: #00003f;
 }
 
-.slider-1 {
+.slider-1-img {
+  width: 70%;
+  height: auto;
+}
+
+.slider-2 {
   display: none;
 }
 
-.slider-1-img {
-  width: 70%;
+.slider-2-img {
+  width: 20%;
   height: auto;
 }
 
@@ -136,19 +142,70 @@ header h1 {
   display: none;
 }
 
+.slider-3-img {
+  width: 35%;
+  height: auto;
+}
+
 .shield {
   padding-left: 10px;
   display: inline;
   text-decoration: none;
   color: #e4bf00;
-}
-
-.hide-shield {
   display: none;
+  text-shadow: 2px 2px 2px #00003f, -2px 2px 2px #00003f, 2px -2px 2px #00003f, 1px 2px 2px #00003f, 2px 1px 2px #00003f, -1px 2px 2px #00003f, 2px -1px 2px #00003f, 1px -2px 2px #00003f, -2px 1px 2px #00003f, -1px -2px 2px #00003f, -2px -1px 2px #00003f, 1px 1px 2px #00003f, -1px -1px 2px #00003f, -1px 1px 2px #00003f, 1px -1px 2px #00003f, 0px 2px 2px #00003f, 2px 0px 2px #00003f, -2px 0px 2px #00003f, 0px -2px 2px #00003f, 0px 1px 2px #00003f, 1px 0px 2px #00003f, 0px -1px 2px #00003f, -1px 0px 2px #00003f, 0px 0px 2px #00003f, 3px 3px 5px black;
 }
 
 .slide-p {
   color: #3f3f3f;
   font-size: 16px;
   padding: 10px;
+}
+
+.next-btn-img {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+}
+
+.prev-btn-img {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+}
+
+.next-btn-img, .prev-btn-img {
+  color: white;
+  text-shadow: 2px 2px 2px #00003f, -2px 2px 2px #00003f, 2px -2px 2px #00003f, 1px 2px 2px #00003f, 2px 1px 2px #00003f, -1px 2px 2px #00003f, 2px -1px 2px #00003f, 1px -2px 2px #00003f, -2px 1px 2px #00003f, -1px -2px 2px #00003f, -2px -1px 2px #00003f, 1px 1px 2px #00003f, -1px -1px 2px #00003f, -1px 1px 2px #00003f, 1px -1px 2px #00003f, 0px 2px 2px #00003f, 2px 0px 2px #00003f, -2px 0px 2px #00003f, 0px -2px 2px #00003f, 0px 1px 2px #00003f, 1px 0px 2px #00003f, 0px -1px 2px #00003f, -1px 0px 2px #00003f, 0px 0px 2px #00003f, 3px 3px 5px black;
+  font-size: 30px;
+}
+.next-btn-img:hover, .prev-btn-img:hover {
+  color: #e4bf00;
+  font-size: 36px;
+}
+
+.dot-container {
+  position: absolute;
+  bottom: 31%;
+  width: 100%;
+  margin: auto;
+}
+
+.dot {
+  color: white;
+  text-shadow: 2px 2px 2px #00003f, -2px 2px 2px #00003f, 2px -2px 2px #00003f, 1px 2px 2px #00003f, 2px 1px 2px #00003f, -1px 2px 2px #00003f, 2px -1px 2px #00003f, 1px -2px 2px #00003f, -2px 1px 2px #00003f, -1px -2px 2px #00003f, -2px -1px 2px #00003f, 1px 1px 2px #00003f, -1px -1px 2px #00003f, -1px 1px 2px #00003f, 1px -1px 2px #00003f, 0px 2px 2px #00003f, 2px 0px 2px #00003f, -2px 0px 2px #00003f, 0px -2px 2px #00003f, 0px 1px 2px #00003f, 1px 0px 2px #00003f, 0px -1px 2px #00003f, -1px 0px 2px #00003f, 0px 0px 2px #00003f, 3px 3px 5px black;
+  position: relative;
+  bottom: 0;
+  font-size: 16px;
+  padding: 0 2px;
+}
+
+.default {
+  color: #e4bf00;
+}
+
+.selected-nav-link {
+  text-decoration: underline;
+  font-size: 28.8px;
+  color: #e4bf00;
 }

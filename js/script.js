@@ -1,51 +1,91 @@
-const home = document.getElementById('home');
-const homeS = document.getElementById('home-shield');
-const about = document.getElementById('about');
-const aboutS = document.getElementById('about-shield');
-const projects = document.getElementById('projects');
-const projectsS = document.getElementById('projects-shield');
-const clients = document.getElementById('clients');
-const clientsS = document.getElementById('clients-shield');
-const contact = document.getElementById('contact');
-const contactS = document.getElementById('contact-shield');
 
-home.addEventListener('mouseover', () => {
-    homeS.classList.remove('hide-shield');
+$(document).ready(() => {
+$('a#home').next().show();
+$('a').click((event) => {
+    $('.fa-shield-alt').hide();
+    $('.nav-link').removeClass('selected-nav-link');
+    if ($(event.currentTarget).is('a#home')) {
+        $(event.currentTarget).next().show();
+        $(event.currentTarget).addClass('selected-nav-link');
+    } 
+    else if ($(event.currentTarget).is('a#about')) {
+        $(event.currentTarget).next().show();
+        $(event.currentTarget).addClass('selected-nav-link');
+    }
+    else if ($(event.currentTarget).is('a#projects')) {
+        $(event.currentTarget).next().show();
+        $(event.currentTarget).addClass('selected-nav-link');
+    }
+    else if ($(event.currentTarget).is('a#clients')) {
+        $(event.currentTarget).next().show();
+        $(event.currentTarget).addClass('selected-nav-link');
+    }
+    else if ($(event.currentTarget).is('a#contact')) {
+        $(event.currentTarget).next().show();
+        $(event.currentTarget).addClass('selected-nav-link');
+    }
 });
 
-home.addEventListener('mouseleave', () => {
-    homeS.classList.add('hide-shield');
+$('.dot-link').click((event) => {
+    $('.fa-circle').css('color', '#fff');
+    if ($(event.currentTarget).is('a#dot-link-1')) {
+        $(event.currentTarget).children().css('color', '#e4bf00');
+    }
+    else if ($(event.currentTarget).is('a#dot-link-2')) {
+        $(event.currentTarget).children().css('color', '#e4bf00');
+    }
+    else if ($(event.currentTarget).is('a#dot-link-3')) {
+        $(event.currentTarget).children().css('color', '#e4bf00');
+    }
+    
 });
 
-about.addEventListener('mouseover', () => {
-    aboutS.classList.remove('hide-shield');
+
+let count = 0;
+$('.cycle-btns').click((event) => {
+    
+    
+    if ($(event.currentTarget).is('a.next-btn-link')) {
+        count++;
+    }
+    else if ($(event.currentTarget).is('a.prev-btn-link')) {
+        count--;
+    }
+
+    if (count > 2) {
+        count = 0;
+    }
+    else if (count < 0) {
+        count = 2;
+    }
+    
+    if (count > -1 || count < 3) {
+        $('.slider-container').fadeOut(700);
+    if (count === 0) {
+        $('.dot').removeClass('default');
+        $('a#dot-link-1').children().addClass('default');
+        $('.slider-container').delay(300).fadeIn();
+        $('.slider').hide();
+        $('.slider-1').show(1500); 
+    }
+    else if (count === 1) {
+        $('.dot').removeClass('default');
+        $('a#dot-link-2').children().addClass('default');
+        $('.slider-container').delay(300).fadeIn();
+        $('.slider').hide();
+        $('.slider-2').show(1500); 
+    }
+    else if (count === 2) {
+        $('.dot').removeClass('default');
+        $('a#dot-link-3').children().addClass('default');
+        $('.slider-container').delay(300).fadeIn();
+        $('.slider').hide();
+        $('.slider-3').show(1500); 
+    }
+}
+
+    
+    
 });
 
-about.addEventListener('mouseleave', () => {
-    aboutS.classList.add('hide-shield');
-});
-
-projects.addEventListener('mouseover', () => {
-    projectsS.classList.remove('hide-shield');
-});
-
-projects.addEventListener('mouseleave', () => {
-    projectsS.classList.add('hide-shield');
-});
-
-clients.addEventListener('mouseover', () => {
-    clientsS.classList.remove('hide-shield');
-});
-
-clients.addEventListener('mouseleave', () => {
-    clientsS.classList.add('hide-shield');
-});
-
-contact.addEventListener('mouseover', () => {
-    contactS.classList.remove('hide-shield');
-});
-
-contact.addEventListener('mouseleave', () => {
-    contactS.classList.add('hide-shield');
-});
-
+})

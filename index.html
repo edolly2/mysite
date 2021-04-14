@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 
@@ -23,11 +24,11 @@
                             <div class="logo-container">
                             </div>
                             <ul class="nav-list">
-                                <li class="list-item"><a href="#" id="home" class="nav-link">Home</a><i class="fas fa-shield-alt shield hide-shield" id="home-shield"></i></li>
-                                <li class="list-item"><a href="#" id="about" class="nav-link">About</a><i class="fas fa-shield-alt shield hide-shield" id="about-shield"></i></li>
-                                <li class="list-item"><a href="#" id="projects" class="nav-link">Projects</a><i class="fas fa-shield-alt shield hide-shield" id="projects-shield"></i></li>
-                                <li class="list-item"><a href="#" id="clients" class="nav-link">Clients</a><i class="fas fa-shield-alt shield hide-shield" id="clients-shield"></i></li>
-                                <li class="list-item"><a href="#" id="contact" class="nav-link">Contact</a><i class="fas fa-shield-alt shield hide-shield" id="contact-shield"></i></li>
+                                <li class="list-item"><a href="#home" id="home" class="nav-link nav-font-size selected-nav-link">Home</a><i class="fas fa-shield-alt shield" id="home-shield"></i></li>
+                                <li class="list-item"><a href="#" id="about" class="nav-link nav-font-size">About</a><i class="fas fa-shield-alt shield" id="about-shield"></i></li>
+                                <li class="list-item"><a href="#" id="projects" class="nav-link nav-font-size">Projects</a><i class="fas fa-shield-alt shield" id="projects-shield"></i></li>
+                                <li class="list-item"><a href="#" id="clients" class="nav-link nav-font-size">Clients</a><i class="fas fa-shield-alt shield" id="clients-shield"></i></li>
+                                <li class="list-item"><a href="#" id="contact" class="nav-link nav-font-size">Contact</a><i class="fas fa-shield-alt shield" id="contact-shield"></i></li>
                             </ul>
                         </nav>
                     </aside>
@@ -35,7 +36,10 @@
                 <main>
                 <section>
                     <div class="slider-container">
-                        <div class="slider-1">
+                        <div class="next-container">
+                            <a href="#" class="next-btn-link cycle-btns"><i class="fas fa-chevron-circle-right next-btn-img"></i></a>
+                        </div>
+                        <div class="slider-1 slider">
                             <div class="slider-1-text-container">
                                 <h3 class="slider-1-heading heading">Responsive Design</h3>
                                 <div class="slider-image-container">
@@ -44,29 +48,37 @@
                                 <p class="slider-1-p slide-p">Responsive Web design is the approach that suggests that design and development should respond to the user’s behavior and environment based on screen size, platform and orientation.</p>
                             </div>
                         </div>
-                        <div class="slider-2">
+                        <div class="slider-2 slider hidden">
                             <div class="slider-2-text-container">
                                 <h3 class="slider-2-heading heading">Progressive Web Apps</h3>
                                 <div class="slider-image-container">
-                                    <img src="#" alt="#">
+                                    <img src="assets/images/webapps.png" alt="progressive web app idea" class="slider-2-img">
                                 </div>
                                 <p class="slider-2-p slide-p">Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications.</p>
                             </div>
                         </div>
-                        <div class="slider-3">
+                        <div class="slider-3 slider hidden">
                             <div class="slider-3-text-container">
-                                <h3 class="slider-3-heading heading">Customize to Your Needs</h3>
+                                <h3 class="slider-3-heading heading">Web Hosting</h3>
                                 <div class="slider-image-container">
-                                    <img src="#" alt="#">
+                                    <img src="assets/images/webhost.png" alt="web hosting example" class="slider-3-img">
                                 </div>
-                                <p class="slider-3-p slide-p"></p>
+                                <p class="slider-3-p slide-p"> We can provide the technologies and services needed for the website or webpage to be viewed in the Internet. Websites are hosted, or stored, on secure servers.</p>
                             </div>
                         </div>
+                        <div class="prev-container">
+                            <a href="#" class="prev-btn-link cycle-btns"><i class="fas fa-chevron-circle-left prev-btn-img"></i></a>
+                        </div>
+                    </div>
+                    <div class="dot-container">
+                        <a href="#" class="dot-link" id="dot-link-1"><i class="fas fa-circle dot default"></i></a>
+                        <a href="#" class="dot-link" id="dot-link-2"><i class="fas fa-circle dot"></i></a>
+                        <a href="#" class="dot-link" id="dot-link-3"><i class="fas fa-circle dot"></i></a>
                     </div>
                 </section>
                 
                     <div class="title-container">
-                        <h1 class="title">Welcome to Dolly Web Development</h1>
+                        <h1 class="title"><a name="home">Welcome to Dolly Web Development</a></h1>
                     </div>
                 
             </main>
