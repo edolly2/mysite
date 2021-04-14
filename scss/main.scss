@@ -2,6 +2,17 @@
 @import "partials/variables";
 @include google-font("Roboto");
 @include google-font("Montserrat");
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
 
 body {
     overflow-y: auto;
@@ -11,6 +22,10 @@ body {
 a {
     text-decoration: none;
     color: $nav-text-color;
+}
+
+main {
+    text-align: center;
 }
 
 aside {
@@ -26,7 +41,7 @@ aside {
 .list-item {
     padding: 10px 0;
     color: $nav-text-color;
-    text-shadow: $blue-outline;
+    text-shadow: $blue-outline, $text-shadow-black;
 }
 
 .list-item a {
@@ -34,6 +49,7 @@ aside {
     &:hover {
         text-decoration: underline;
         font-size: ($medium-font * 1.2);
+        color: #e4bf00;
     }
 }
 
@@ -48,9 +64,11 @@ aside {
     @include medium-screens {
         width: 250px;
         .title {
-            font-size: $xlarge-font;
+            font-size: $xxxlarge-font;
         }
     }
+    text-align: center;
+    width: 100%;
     
 }
 
@@ -59,12 +77,23 @@ aside {
     height: 150px;
     background-repeat: no-repeat;
     background-position: center;
+    @include padding;
 }
 
 .title {
-    color: $headline-color;
     @include bold;
     margin-top: 0;
+    white-space: nowrap;
+    @include padding;
+    color: $headline-color-dark;
+    text-shadow: $yellow-outline, $text-shadow-black;
+    width: 100vw;
+    
+}
+
+.heading {
+    @include padding;
+    text-shadow: $text-shadow-black;
 }
 
 header h1 {
@@ -77,20 +106,29 @@ header h1 {
 
 .slider-container {
     @include center-slider;
-    background-color: white;
+    background: rgb(135,135,135);
+    background: linear-gradient(139deg, rgba(135,135,135,1) 0%, rgba(133,133,133,1) 5%, rgba(255,255,255,1) 50%, rgba(133,133,133,1) 95%, rgba(135,135,135,1) 100%);
     width: 50%;
     height: 50%;
     border-radius: $radius-6;
     text-align: center;
     font-size: $xlarge-font;
+    border: $gray-border;
+    @include box-shadow-black;
+    color: $headline-color-dark;
 }
 
 .slider-1 {
-    
+    @include hidden;
+}
+
+.slider-1-img {
+    width: 70%;
+    height: auto;
 }
 
 .slider-2 {
-    @include hidden;
+    // @include hidden;
 }
 
 .slider-3 {
@@ -101,9 +139,17 @@ header h1 {
     padding-left: 10px;
     display: inline;
     text-decoration: none;
+    color: #e4bf00;
     
 }
 .hide-shield {
     display: none;
 
 }
+
+.slide-p {
+    color: $slide-p-color;
+    font-size: $small-font;
+    padding: 10px;
+}
+

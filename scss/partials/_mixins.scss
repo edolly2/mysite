@@ -19,10 +19,16 @@
 
 @mixin center-slider {
     position: absolute;
-    left: 57%;
-    top: 35%;
+    left: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
 }
+
+@mixin padding {
+    padding: 10px 0;
+}
+
+
 
 
 // MEDIA QS

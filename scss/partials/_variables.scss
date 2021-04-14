@@ -4,6 +4,8 @@ $background-color-header: rgb(136, 17, 17);
 $background-color-footer: rgb(136, 17, 17);
 $headline-color: rgb(110, 194, 196);
 $nav-text-color: rgb(255, 255, 255);
+$headline-color-dark: rgb(0, 0, 63);
+$slide-p-color: rgb(63, 63, 63);
 // FONTS
 $headline-font: "Montserrat";
 $text-font: "Roboto";
@@ -14,13 +16,15 @@ $small-font: 16px;
 $medium-font: 24px;
 $large-font: 30px;
 $xlarge-font: 36px;
+$xxlarge-font: 42px;
+$xxxlarge-font: 48px;
 
 // FONT OUTLINE
 $blue-outline: 2px 2px 2px rgb(0, 0, 63), -2px 2px 2px rgb(0, 0, 63), 2px -2px 2px rgb(0, 0, 63), 1px 2px 2px rgb(0, 0, 63), 2px 1px 2px rgb(0, 0, 63), -1px 2px 2px rgb(0, 0, 63), 2px -1px 2px rgb(0, 0, 63), 1px -2px 2px rgb(0, 0, 63), -2px 1px 2px rgb(0, 0, 63), -1px -2px 2px rgb(0, 0, 63), -2px -1px 2px rgb(0, 0, 63), 1px 1px 2px rgb(0, 0, 63), -1px -1px 2px rgb(0, 0, 63), -1px 1px 2px rgb(0, 0, 63), 1px -1px 2px rgb(0, 0, 63), 0px 2px 2px rgb(0, 0, 63), 2px 0px 2px rgb(0, 0, 63), -2px 0px 2px rgb(0, 0, 63), 0px -2px 2px rgb(0, 0, 63), 0px 1px 2px rgb(0, 0, 63), 1px 0px 2px rgb(0, 0, 63), 0px -1px 2px rgb(0, 0, 63), -1px 0px 2px rgb(0, 0, 63), 0px 0px 2px rgb(0, 0, 63);
 
 $red-outline: 2px 2px 2px rgb(136, 17, 17), -2px 2px 2px rgb(136, 17, 17), 2px -2px 2px rgb(136, 17, 17), 1px 2px 2px rgb(136, 17, 17), 2px 1px 2px rgb(136, 17, 17), -1px 2px 2px rgb(136, 17, 17), 2px -1px 2px rgb(136, 17, 17), 1px -2px 2px rgb(136, 17, 17), -2px 1px 2px rgb(136, 17, 17), -1px -2px 2px rgb(136, 17, 17), -2px -1px 2px rgb(136, 17, 17), 1px 1px 2px rgb(136, 17, 17), -1px -1px 2px rgb(136, 17, 17), -1px 1px 2px rgb(136, 17, 17), 1px -1px 2px rgb(136, 17, 17), 0px 2px 2px rgb(136, 17, 17), 2px 0px 2px rgb(136, 17, 17), -2px 0px 2px rgb(136, 17, 17), 0px -2px 2px rgb(136, 17, 17), 0px 1px 2px rgb(136, 17, 17), 1px 0px 2px rgb(136, 17, 17), 0px -1px 2px rgb(136, 17, 17), -1px 0px 2px rgb(136, 17, 17), 0px 0px 2px rgb(136, 17, 17);
 
-$yellow-outline: 2px 2px 2px rgb(196, 176, 90), -2px 2px 2px rgb(196, 176, 90), 2px -2px 2px rgb(196, 176, 90), 1px 2px 2px rgb(196, 176, 90), 2px 1px 2px rgb(196, 176, 90), -1px 2px 2px rgb(196, 176, 90), 2px -1px 2px rgb(196, 176, 90), 1px -2px 2px rgb(196, 176, 90), -2px 1px 2px rgb(196, 176, 90), -1px -2px 2px rgb(196, 176, 90), -2px -1px 2px rgb(196, 176, 90), 1px 1px 2px rgb(196, 176, 90), -1px -1px 2px rgb(196, 176, 90), -1px 1px 2px rgb(196, 176, 90), 1px -1px 2px rgb(196, 176, 90), 0px 2px 2px rgb(196, 176, 90), 2px 0px 2px rgb(196, 176, 90), -2px 0px 2px rgb(196, 176, 90), 0px -2px 2px rgb(196, 176, 90), 0px 1px 2px rgb(196, 176, 90), 1px 0px 2px rgb(196, 176, 90), 0px -1px 2px rgb(196, 176, 90), -1px 0px 2px rgb(196, 176, 90), 0px 0px 2px rgb(196, 176, 90);
+$yellow-outline: 2px 2px 2px #e4bf00, -2px 2px 2px #e4bf00, 2px -2px 2px #e4bf00, 1px 2px 2px #e4bf00, 2px 1px 2px #e4bf00, -1px 2px 2px #e4bf00, 2px -1px 2px #e4bf00, 1px -2px 2px #e4bf00, -2px 1px 2px #e4bf00, -1px -2px 2px #e4bf00, -2px -1px 2px #e4bf00, 1px 1px 2px #e4bf00, -1px -1px 2px #e4bf00, -1px 1px 2px #e4bf00, 1px -1px 2px #e4bf00, 0px 2px 2px #e4bf00, 2px 0px 2px #e4bf00, -2px 0px 2px #e4bf00, 0px -2px 2px #e4bf00, 0px 1px 2px #e4bf00, 1px 0px 2px #e4bf00, 0px -1px 2px #e4bf00, -1px 0px 2px #e4bf00, 0px 0px 2px #e4bf00;
 
 $gray-outline: 2px 2px 2px rgb(165, 165, 165), -2px 2px 2px rgb(165, 165, 165), 2px -2px 2px rgb(165, 165, 165), 1px 2px 2px rgb(165, 165, 165), 2px 1px 2px rgb(165, 165, 165), -1px 2px 2px rgb(165, 165, 165), 2px -1px 2px rgb(165, 165, 165), 1px -2px 2px rgb(165, 165, 165), -2px 1px 2px rgb(165, 165, 165), -1px -2px 2px rgb(165, 165, 165), -2px -1px 2px rgb(165, 165, 165), 1px 1px 2px rgb(165, 165, 165), -1px -1px 2px rgb(165, 165, 165), -1px 1px 2px rgb(165, 165, 165), 1px -1px 2px rgb(165, 165, 165), 0px 2px 2px rgb(165, 165, 165), 2px 0px 2px rgb(165, 165, 165), -2px 0px 2px rgb(165, 165, 165), 0px -2px 2px rgb(165, 165, 165), 0px 1px 2px rgb(165, 165, 165), 1px 0px 2px rgb(165, 165, 165), 0px -1px 2px rgb(165, 165, 165), -1px 0px 2px rgb(165, 165, 165), 0px 0px 2px rgb(165, 165, 165);
 $black-outline: 2px 2px 2px rgb(0, 0, 0), -2px 2px 2px rgb(0, 0, 0), 2px -2px 2px rgb(0, 0, 0), 1px 2px 2px rgb(0, 0, 0), 2px 1px 2px rgb(0, 0, 0), -1px 2px 2px rgb(0, 0, 0), 2px -1px 2px rgb(0, 0, 0), 1px -2px 2px rgb(0, 0, 0), -2px 1px 2px rgb(0, 0, 0), -1px -2px 2px rgb(0, 0, 0), -2px -1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px rgb(0, 0, 0), -1px 1px 2px rgb(0, 0, 0), 1px -1px 2px rgb(0, 0, 0), 0px 2px 2px rgb(0, 0, 0), 2px 0px 2px rgb(0, 0, 0), -2px 0px 2px rgb(0, 0, 0), 0px -2px 2px rgb(0, 0, 0), 0px 1px 2px rgb(0, 0, 0), 1px 0px 2px rgb(0, 0, 0), 0px -1px 2px rgb(0, 0, 0), -1px 0px 2px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0);
@@ -46,5 +50,7 @@ $black-border: 1px solid rgb(0, 0, 0);
 // IMAGES
 $hero: url("../../assets/images/webdev.jpg");
 $logo: url("../../assets/images/dhilogo.png");
+
+$text-shadow-black: 3px 3px 5px rgb(0, 0, 0);
 
 

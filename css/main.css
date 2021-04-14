@@ -1,5 +1,17 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat);
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   overflow-y: auto;
 }
@@ -7,6 +19,10 @@ body {
 a {
   text-decoration: none;
   color: white;
+}
+
+main {
+  text-align: center;
 }
 
 aside {
@@ -22,7 +38,7 @@ aside {
 .list-item {
   padding: 10px 0;
   color: white;
-  text-shadow: 2px 2px 2px #00003f, -2px 2px 2px #00003f, 2px -2px 2px #00003f, 1px 2px 2px #00003f, 2px 1px 2px #00003f, -1px 2px 2px #00003f, 2px -1px 2px #00003f, 1px -2px 2px #00003f, -2px 1px 2px #00003f, -1px -2px 2px #00003f, -2px -1px 2px #00003f, 1px 1px 2px #00003f, -1px -1px 2px #00003f, -1px 1px 2px #00003f, 1px -1px 2px #00003f, 0px 2px 2px #00003f, 2px 0px 2px #00003f, -2px 0px 2px #00003f, 0px -2px 2px #00003f, 0px 1px 2px #00003f, 1px 0px 2px #00003f, 0px -1px 2px #00003f, -1px 0px 2px #00003f, 0px 0px 2px #00003f;
+  text-shadow: 2px 2px 2px #00003f, -2px 2px 2px #00003f, 2px -2px 2px #00003f, 1px 2px 2px #00003f, 2px 1px 2px #00003f, -1px 2px 2px #00003f, 2px -1px 2px #00003f, 1px -2px 2px #00003f, -2px 1px 2px #00003f, -1px -2px 2px #00003f, -2px -1px 2px #00003f, 1px 1px 2px #00003f, -1px -1px 2px #00003f, -1px 1px 2px #00003f, 1px -1px 2px #00003f, 0px 2px 2px #00003f, 2px 0px 2px #00003f, -2px 0px 2px #00003f, 0px -2px 2px #00003f, 0px 1px 2px #00003f, 1px 0px 2px #00003f, 0px -1px 2px #00003f, -1px 0px 2px #00003f, 0px 0px 2px #00003f, 3px 3px 5px black;
 }
 
 .list-item a {
@@ -31,8 +47,13 @@ aside {
 .list-item a:hover {
   text-decoration: underline;
   font-size: 28.8px;
+  color: #e4bf00;
 }
 
+.title-container {
+  text-align: center;
+  width: 100%;
+}
 @media only screen and (max-width: 880px) {
   .title-container {
     width: 175px;
@@ -46,7 +67,7 @@ aside {
     width: 250px;
   }
   .title-container .title {
-    font-size: 36px;
+    font-size: 48px;
   }
 }
 
@@ -55,12 +76,22 @@ aside {
   height: 150px;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 10px 0;
 }
 
 .title {
-  color: #6ec2c4;
   font-weight: bold;
   margin-top: 0;
+  white-space: nowrap;
+  padding: 10px 0;
+  color: #00003f;
+  text-shadow: 2px 2px 2px #e4bf00, -2px 2px 2px #e4bf00, 2px -2px 2px #e4bf00, 1px 2px 2px #e4bf00, 2px 1px 2px #e4bf00, -1px 2px 2px #e4bf00, 2px -1px 2px #e4bf00, 1px -2px 2px #e4bf00, -2px 1px 2px #e4bf00, -1px -2px 2px #e4bf00, -2px -1px 2px #e4bf00, 1px 1px 2px #e4bf00, -1px -1px 2px #e4bf00, -1px 1px 2px #e4bf00, 1px -1px 2px #e4bf00, 0px 2px 2px #e4bf00, 2px 0px 2px #e4bf00, -2px 0px 2px #e4bf00, 0px -2px 2px #e4bf00, 0px 1px 2px #e4bf00, 1px 0px 2px #e4bf00, 0px -1px 2px #e4bf00, -1px 0px 2px #e4bf00, 0px 0px 2px #e4bf00, 3px 3px 5px black;
+  width: 100vw;
+}
+
+.heading {
+  padding: 10px 0;
+  text-shadow: 3px 3px 5px black;
 }
 
 header h1 {
@@ -77,19 +108,28 @@ header h1 {
 
 .slider-container {
   position: absolute;
-  left: 57%;
-  top: 35%;
+  left: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background: #878787;
+  background: linear-gradient(139deg, #878787 0%, #858585 5%, white 50%, #858585 95%, #878787 100%);
   width: 50%;
   height: 50%;
   border-radius: 6px;
   text-align: center;
   font-size: 36px;
+  border: 1px solid #a5a5a5;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  color: #00003f;
 }
 
-.slider-2 {
+.slider-1 {
   display: none;
+}
+
+.slider-1-img {
+  width: 70%;
+  height: auto;
 }
 
 .slider-3 {
@@ -100,8 +140,15 @@ header h1 {
   padding-left: 10px;
   display: inline;
   text-decoration: none;
+  color: #e4bf00;
 }
 
 .hide-shield {
   display: none;
+}
+
+.slide-p {
+  color: #3f3f3f;
+  font-size: 16px;
+  padding: 10px;
 }
