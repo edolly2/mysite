@@ -67,7 +67,7 @@
     height: 70vh;
 }
 
-// HIDDEN
+// HIDDE
 
 @mixin hidden {
     display: none;
@@ -82,9 +82,7 @@
 
 // SHADOWS
 // SHADOW
-@mixin box-shadow-black {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-}
+
 
 @mixin box-shadow-gray {
     box-shadow: 5px 5px 10px rgba(165, 165, 165, 0.6);

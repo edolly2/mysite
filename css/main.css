@@ -14,6 +14,8 @@ img {
 
 body {
   overflow-y: auto;
+  height: 500vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -88,6 +90,7 @@ aside {
   color: #00003f;
   text-shadow: 2px 2px 2px #e4bf00, -2px 2px 2px #e4bf00, 2px -2px 2px #e4bf00, 1px 2px 2px #e4bf00, 2px 1px 2px #e4bf00, -1px 2px 2px #e4bf00, 2px -1px 2px #e4bf00, 1px -2px 2px #e4bf00, -2px 1px 2px #e4bf00, -1px -2px 2px #e4bf00, -2px -1px 2px #e4bf00, 1px 1px 2px #e4bf00, -1px -1px 2px #e4bf00, -1px 1px 2px #e4bf00, 1px -1px 2px #e4bf00, 0px 2px 2px #e4bf00, 2px 0px 2px #e4bf00, -2px 0px 2px #e4bf00, 0px -2px 2px #e4bf00, 0px 1px 2px #e4bf00, 1px 0px 2px #e4bf00, 0px -1px 2px #e4bf00, -1px 0px 2px #e4bf00, 0px 0px 2px #e4bf00, 3px 3px 5px black;
   width: 100vw;
+  display: none;
 }
 
 .heading {
@@ -208,4 +211,26 @@ header h1 {
   text-decoration: underline;
   font-size: 28.8px;
   color: #e4bf00;
+}
+
+.below-hero-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  width: 100vw;
+  height: 30vh;
+  background-color: #00003f;
+  border-top: 1px solid #a5a5a5;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.leader-title {
+  font-size: 42px;
+  color: #6ec2c4;
+  padding: 10px 0;
+  display: none;
+}
+
+.hidden {
+  display: none;
 }
