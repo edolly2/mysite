@@ -1,0 +1,68 @@
+/* =========COLORS========== 
+============================
+==========================*/
+
+@mixin page-bg-color {
+    background-color: $white;
+}
+
+@mixin headline-bg-color {
+    background-color: $blue;
+}
+
+@mixin footer-bg-color {
+    background-color: $blue;
+}
+
+@mixin page-font-color {
+    color: $dark-blue;
+}
+
+@mixin headline-font-color {
+    color: $dark-blue;
+}
+
+@mixin nav-link-color {
+    color: $white;
+}
+
+
+/* =========FONTS=========== 
+============================
+==========================*/
+
+@mixin google-font($font) {
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com/css2?family=#{$font});
+}
+
+
+/* =========OUTLINES=========== 
+===============================
+=============================*/
+
+@mixin white-font-outline {
+    text-shadow: 2px 2px 2px #ffffff, -2px 2px 2px #ffffff, 2px -2px 2px #ffffff, 1px 2px 2px #ffffff, 2px 1px 2px #ffffff, -1px 2px 2px #ffffff, 2px -1px 2px #ffffff, 1px -2px 2px #ffffff, -2px 1px 2px #ffffff, -1px -2px 2px #ffffff, -2px -1px 2px #ffffff, 1px 1px 2px #ffffff, -1px -1px 2px #ffffff, -1px 1px 2px #ffffff, 1px -1px 2px #ffffff, 0px 2px 2px #ffffff, 2px 0px 2px #ffffff, -2px 0px 2px #ffffff, 0px -2px 2px #ffffff, 0px 1px 2px #ffffff, 1px 0px 2px #ffffff, 0px -1px 2px #ffffff, -1px 0px 2px #ffffff, 0px 0px 2px #ffffff, 3px 3px 5px black;
+}
+
+@mixin headline-padding {
+    padding: 20px;
+}
+
+@mixin page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 3.5fr 3.5fr 0.5;
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+}
+
+@mixin link-padding {
+    padding: 10px;
+}
+
+@mixin navbar-center {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}

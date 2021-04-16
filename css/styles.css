@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* .logo-container {
+    width: 15vw;
+    height: auto;
+} */
+
+.logo {}
