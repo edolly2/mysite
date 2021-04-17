@@ -41,8 +41,8 @@ header {
   color: #002147;
   grid-area: header;
   min-height: 150px;
-  width: 95%;
-  margin: 10px auto 0 auto;
+  width: 97%;
+  margin: 1.6em auto 0 auto;
 }
 
 nav {
@@ -146,4 +146,45 @@ footer {
 }
 .top-navbar-link:hover {
   background-color: rgba(0, 33, 71, 0.5);
+}
+
+.whisker-menu-icon-container {
+  padding: 0 0 1em 2em;
+  position: absolute;
+  top: 12em;
+}
+@media screen and (min-width: 471px) {
+  .whisker-menu-icon-container {
+    display: none;
+  }
+}
+
+.whisker-menu-links-container {
+  background-color: rgba(0, 33, 71, 0.5);
+  display: none;
+  margin-top: 0.6em;
+  position: absolute;
+  width: 97%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.whisker-menu-link {
+  padding: 2em;
+}
+
+.whisker-menu-list li {
+  padding: 0.5em 0;
+}
+
+.whisker-menu-list li:first-child {
+  padding-top: 1em;
+}
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
