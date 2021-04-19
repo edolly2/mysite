@@ -1,13 +1,32 @@
     @import "partials/variables";
     @import "partials/mixins";
+    @include google-font('Roboto');
+    @include google-font('Montserrat');
+    html {
+        box-sizing: border-box;
+        font-size: 100%;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
     body {
         @include page-bg-color;
         @include page-font-color;
         font-size: 62.5%;
         margin: 0;
         line-height: normal;
-        overflow: hidden;
+        overflow: auto;
         width: 100vw;
+        text-shadow: $small-text-shadow;
+        font-family: 'Roboto';
     }
     
     h1,
@@ -16,20 +35,19 @@
     h4,
     h5,
     h6 {
-        @include headline-bg-color;
-        @include headline-font-color;
-        @include white-font-outline;
         @include headline-padding;
         font-weight: $bold;
+        font-family: 'Montserrat';
+        text-shadow: $white-outline, $big-text-shadow;
     }
     
     header {
         @include headline-bg-color;
         @include headline-font-color;
         grid-area: header;
-        min-height: 150px;
         width: 97%;
-        margin: 1.6em auto 0 auto;
+        margin: 1.5% auto 0 auto;
+        border: 2px solid $gray;
     }
     
     nav {
@@ -38,10 +56,20 @@
     
     main {
         grid-area: main;
+        width: 97%;
+        margin: 1.5% auto 0 auto;
+        height: auto;
     }
     
     footer {
         grid-area: footer;
+        width: 97%;
+        margin: 1.5% auto 0 auto;
+        border: 2px solid $dark-blue;
+        background-color: $gray;
+        color: $dark-blue;
+        text-shadow: $white-outline, $small-text-shadow;
+        display: flex;
     }
     
     .page-container {
@@ -57,6 +85,8 @@
     
     .top-title-container {
         display: flex;
+        line-height: 1.4;
+        vertical-align: baseline;
         @media screen and (max-width: 470px) {
             display: block;
             text-align: center;
@@ -65,7 +95,12 @@
     }
     
     .top-title {
+        @include headline-bg-color;
+        @include headline-font-color;
+        white-space: nowrap;
         font-size: clamp(2.6em, 3.5vw, 5em);
+        margin-bottom: 0.5rem;
+        margin-top: 0;
         @media screen and (max-width: 470px) {
             margin-bottom: 0;
             padding-bottom: 0;
@@ -95,32 +130,41 @@
     
     .top-navbar-container {
         display: flex;
+        padding-bottom: 20px;
     }
     
     .top-navbar-list {
         display: flex;
+        justify-content: center;
         list-style: none;
-        @include navbar-center;
         @media screen and (max-width: 470px) {
             display: none;
         }
     }
     
-    .top-navbar-link {
+    .top-navbar-link,
+    .whisker-menu-link {
         margin: 0 auto;
         @include link-padding;
         text-decoration: none;
         font-size: clamp(1.2em, 1.2vw, 1.8em);
         @include nav-link-color;
+        list-style: none;
+        line-height: inherit;
+        vertical-align: baseline;
         &:hover {
             background-color: rgba(0, 33, 71, 0.5);
+            color: $yellow;
         }
+        &:active {}
     }
+    
+    .top-navbar-link {}
     
     .whisker-menu-icon-container {
         padding: 0 0 1em 2em;
         position: absolute;
-        top: 12em;
+        top: 12.5em;
         @media screen and (min-width: 471px) {
             display: none;
         }
@@ -129,17 +173,27 @@
     .whisker-menu-icon {}
     
     .whisker-menu-links-container {
-        background-color: rgba(0, 33, 71, 0.5);
+        background-color: rgba(0, 119, 255, 0.8);
         display: none;
-        margin-top: .6em;
         position: absolute;
         width: 97%;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        padding-bottom: 10px;
+        @media screen and (min-width: 471px) {
+            display: none;
+            padding: 0;
+        }
     }
     
     .whisker-menu-link {
-        padding: 2em;
+        @media screen and (min-width: 471px) {
+            display: none;
+        }
+    }
+    
+    .whisker-menu-list {
+        @media screen and (min-width: 471px) {
+            display: none;
+        }
     }
     
     .whisker-menu-list li {
@@ -156,4 +210,128 @@
         -o-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
+    }
+    
+    .is-active {
+        background-color: rgba(0, 33, 71, 0.5);
+        color: $yellow;
+    }
+    
+    .fa-shield-alt {
+        color: $dark-blue;
+        text-shadow: $yellow-outline;
+        display: none;
+        padding: 0 5px;
+        text-decoration: none;
+    }
+    
+    .show {
+        display: inline;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .main-title-container {
+        background-color: $gray;
+        text-align: center;
+    }
+    
+    .main-title {
+        color: $dark-blue;
+        font-size: clamp(1.6em, 2vw, 3.5em);
+        border: 2px solid $dark-blue;
+    }
+    
+    .cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        margin: 0 auto;
+        margin-top: 1.5%;
+    }
+    
+    .card-1-container {
+        background-color: $blue;
+        border: 2px solid $gray;
+        min-width: 30%;
+        max-width: 30%;
+        text-align: center;
+        .card-1-title {
+            font-size: clamp(1em, 1.2vw, 1.8em);
+            border-bottom: 2px solid $gray;
+            background: rgb(1, 67, 143);
+            background: linear-gradient(139deg, rgba(1, 67, 143, 1) 0%, rgba(135, 135, 135, 1) 35%, rgba(255, 255, 255, 1) 50%, rgba(135, 135, 135, 1) 65%, rgba(1, 67, 143, 1) 100%);
+            min-height: 68px;
+        }
+        .card-1-img-container {
+            min-height: 100px;
+        }
+        .card-1-img {
+            padding: 10px;
+            max-height: 100px;
+        }
+        .card-1-p-container {
+            display: flex;
+        }
+        .card-1-p {
+            color: white;
+            padding: 10px;
+        }
+    }
+    
+    .card-2-container {
+        background-color: $blue;
+        border: 2px solid $gray;
+        min-width: 30%;
+        max-width: 30%;
+        text-align: center;
+        .card-2-title {
+            font-size: clamp(1em, 1.2vw, 1.8em);
+            border-bottom: 2px solid $gray;
+            background: rgb(1, 67, 143);
+            background: linear-gradient(139deg, rgba(1, 67, 143, 1) 0%, rgba(135, 135, 135, 1) 35%, rgba(255, 255, 255, 1) 50%, rgba(135, 135, 135, 1) 65%, rgba(1, 67, 143, 1) 100%);
+            min-height: 68px;
+        }
+        .card-2-img {
+            padding: 10px 0;
+            max-width: 46%;
+            max-height: 100px;
+        }
+        .card-2-p-container {
+            display: flex;
+            color: white;
+        }
+        .card-2-p {
+            color: white;
+            padding: 10px;
+        }
+    }
+    
+    .card-3-container {
+        background-color: $blue;
+        border: 2px solid $gray;
+        min-width: 30%;
+        max-width: 30%;
+        text-align: center;
+        .card-3-title {
+            font-size: clamp(1em, 1.2vw, 1.8em);
+            border-bottom: 2px solid $gray;
+            background: rgb(1, 67, 143);
+            background: linear-gradient(139deg, rgba(1, 67, 143, 1) 0%, rgba(135, 135, 135, 1) 35%, rgba(255, 255, 255, 1) 50%, rgba(135, 135, 135, 1) 65%, rgba(1, 67, 143, 1) 100%);
+            min-height: 68px;
+        }
+        .card-3-img {
+            padding: 10px;
+            max-height: 100px;
+        }
+        .card-3-p-container {
+            display: flex;
+        }
+        .card-3-p {
+            color: white;
+            padding: 10px;
+        }
     }

@@ -8,9 +8,7 @@
     <meta name="HandheldFriendly" content="true">
     <title>Dolly Web Development</title>
     <link rel="stylesheet" href="css/RESET.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/zurb.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="js/script.js" defer></script>
@@ -34,46 +32,92 @@
                 <div class="top-navbar-container">
                     <nav>
                         <ul class="top-navbar-list" data-menu>
-                            <li><a href="#" class="top-navbar-link" id="home">HOME</a></li>
-                            <li><a href="#" class="top-navbar-link" id="about">ABOUT</a></li>
-                            <li><a href="#" class="top-navbar-link" id="clients">CLIENTS</a></li>
-                            <li><a href="#" class="top-navbar-link" id="projects">PROJECTS</a></li>
-                            <li><a href="#" class="top-navbar-link" id="contact">CONTACT</a></li>
+                            <li><a href="index.html" class="top-navbar-link is-active tl1" id="home">HOME <i class="fas fa-shield-alt show tls ts1"></i></a></li>
+                            <li><a href="#" class="top-navbar-link tl2" id="about">ABOUT <i class="fas fa-shield-alt tls ts2"></i></a></li>
+                            <li><a href="#" class="top-navbar-link tl3" id="clients">CLIENTS <i class="fas fa-shield-alt tls ts3"></i></a></li>
+                            <li><a href="#" class="top-navbar-link tl4" id="projects">PROJECTS <i class="fas fa-shield-alt tls ts4"></i></a></li>
+                            <li><a href="#" class="top-navbar-link tl5" id="contact">CONTACT <i class="fas fa-shield-alt tls ts5"></i></a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+            <!-- NAVIGATION DROP DOWN HAMBURGER ON SMALL SCREENS -->
             <div class="whisker-menu-icon-container">
                 <img src="assets/icons/menu.svg" alt="whisker menu" class="whisker-menu-icon" style="width: 3.3em; height: auto;">
             </div>
             <div class="whisker-menu-links-container">
                 <nav>
                     <ul class="whisker-menu-list">
-                        <li><a href="#" class="whisker-menu-link" id="whome">HOME</a></li>
-                        <li><a href="#" class="whisker-menu-link" id="wabout">ABOUT</a></li>
-                        <li><a href="#" class="whisker-menu-link" id="wclients">CLIENTS</a></li>
-                        <li><a href="#" class="whisker-menu-link" id="wprojects">PROJECTS</a></li>
-                        <li><a href="#" class="whisker-menu-link" id="wcontact">CONTACT</a></li>
+                        <li><a href="index.html" class="whisker-menu-link is-active wm1" id="whome">HOME <i class="fas fa-shield-alt show wms ws1"></i></a></li>
+                        <li><a href="#" class="whisker-menu-link wm2" id="wabout">ABOUT <i class="fas fa-shield-alt wms ws2"></i></a></li>
+                        <li><a href="#" class="whisker-menu-link wm3" id="wclients">CLIENTS <i class="fas fa-shield-alt wms ws3"></i></a></li>
+                        <li><a href="#" class="whisker-menu-link wm4" id="wprojects">PROJECTS <i class="fas fa-shield-alt wms ws4"></i></a></li>
+                        <li><a href="#" class="whisker-menu-link wm5" id="wcontact">CONTACT<i class="fas fa-shield-alt wms ws5"></i></a></li>
                     </ul>
                 </nav>
             </div>
             <!-- END TOP NAV -->
         </header>
         <!-- END HEADER -->
-        <br>
+        <!-- MAIN CONTENT -->
+        <main>
+            <div class="main-title-container">
+                <h2 class="main-title">Your Expert in Web Design & Development...</h2>
+            </div>
+            <div class="cards-container">
+                <div class="card-1-container">
+                    <h3 class="card-1-title">Responsive Design</h3>
+                    <div class="card-1-img-container">
+                        <img src="assets/images/responsive.png" alt="#" class="card-1-img">
+                    </div>
+                    <div class="card-3-p-container">
+                        <p class="card-1-p">Responsive Web design is the approach that suggests that design and development should respond to the user’s behavior and environment based on screen size, platform and orientation.</p>
+                    </div>
+                </div>
+                <div class="card-2-container">
+                    <h3 class="card-2-title">Progressive Web Apps</h3>
+                    <div class="card-2-img-container">
+                        <img src="assets/images/webapps.png" alt="#" class="card-2-img">
+                    </div>
+                    <div class="card-3-p-container">
+                        <p class="card-2-p">Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications.</p>
+                    </div>
+                </div>
+                <div class="card-3-container">
+                    <h3 class="card-3-title">Web Hosting</h3>
+                    <div class="card-3-img-container">
+                        <img src="assets/images/webhost.png" alt="#" class="card-3-img">
+                    </div>
+                    <div class="card-3-p-container">
+                        <p class="card-3-p">We can provide the technologies and services needed for the website or webpage to be viewed in the Internet. Websites are hosted, or stored, on secure servers.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
+        <footer>
+            <div class="copy-container">
+                <p class="copy">copyright 2021</p>
+            </div>
 
-        <div class="row column">
-            <hr>
-            <ul class="menu">
-                <li>Dolly Web Development</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li class="float-right">Copyright 2016</li>
-            </ul>
-        </div>
+            <div class="bottom-nav-container">
+                <nav>
+                    <ul class="bottom-nav-list">
+
+                        <li><a href="#" class="bottom-nav-link">HOME</a></li>
+                        <li><a href="#" class="bottom-nav-link">ABOUT</a></li>
+                        <li><a href="#" class="bottom-nav-link">CLIENTS</a></li>
+                        <li><a href="#" class="bottom-nav-link">PROJECTS</a></li>
+                        <li><a href="#" class="bottom-nav-link">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bottom-nav-title-container">
+                <h4 class="bottom-nav-title">Dolly Web Development</h4>
+            </div>
+        </footer>
     </div>
+
 </body>
 
 </html>

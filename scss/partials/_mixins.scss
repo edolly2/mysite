@@ -52,7 +52,7 @@
 @mixin page-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 3.5fr 3.5fr 0.5;
+    grid-template-rows: 0.5fr 2fr 0.2fr;
     grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
 }
 
@@ -66,3 +66,6 @@
     top: 20%;
     transform: translate(-50%, -50%);
 }
+
+$big-text-shadow: 5px 5px 10px black;
+$small-text-shadow: 3px 3px 3px black;
