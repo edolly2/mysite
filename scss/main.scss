@@ -59,6 +59,7 @@
         width: 97%;
         margin: 1.5% auto 0 auto;
         height: auto;
+        
     }
     
     footer {
@@ -251,6 +252,10 @@
         flex-grow: 1;
         margin: 0 auto;
         margin-top: 1.5%;
+        @media screen and (max-width: 470px) {
+            display: block;
+            
+        }
     }
     
     .card-1-container {
