@@ -254,7 +254,6 @@
         margin-top: 1.5%;
         @media screen and (max-width: 470px) {
             display: block;
-            
         }
     }
     
@@ -264,6 +263,9 @@
         min-width: 30%;
         max-width: 30%;
         text-align: center;
+        @media screen and (max-width: 470px) {
+            min-width: 80%;
+        }
         .card-1-title {
             font-size: clamp(1em, 1.2vw, 1.8em);
             border-bottom: 2px solid $gray;
@@ -293,6 +295,9 @@
         min-width: 30%;
         max-width: 30%;
         text-align: center;
+        @media screen and (max-width: 470px) {
+            min-width: 80%;
+        }
         .card-2-title {
             font-size: clamp(1em, 1.2vw, 1.8em);
             border-bottom: 2px solid $gray;
@@ -321,6 +326,9 @@
         min-width: 30%;
         max-width: 30%;
         text-align: center;
+        @media screen and (max-width: 470px) {
+            min-width: 80 a%;
+        }
         .card-3-title {
             font-size: clamp(1em, 1.2vw, 1.8em);
             border-bottom: 2px solid $gray;
