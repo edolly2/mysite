@@ -30,9 +30,9 @@ body {
     font-size: 62.5%;
     margin: 0;
     line-height: normal;
-    overflow: hidden;
-    width: 100vw;
-    text-shadow: 3px 3px 3px black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
     font-family: "Roboto";
 }
 
@@ -60,6 +60,8 @@ header {
 
 nav {
     width: 100%;
+    text-shadow: 3px 3px 3px black;
+
 }
 
 main {
@@ -80,6 +82,7 @@ footer {
     display: flex;
     border-radius: 6px;
 }
+
 
 /* =========PAGE CONTAINER========== 
 ======================================
@@ -111,6 +114,7 @@ footer {
     font-size: clamp(2.6em, 3.5vw, 5em);
     margin-bottom: 0.5rem;
     margin-top: 0;
+
 
 }
 
@@ -242,24 +246,28 @@ footer {
     text-align: center;
     border-radius: 6px;
     box-shadow: 2px 2px 5px black;
+    display: none;
 }
 
-.card-1-title,
-.card-2-title,
-.card-3-title {
-    font-size: clamp(1em, 1.2vw, 1.8em);
+.card-1-title-container,
+.card-2-title-container,
+.card-3-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.2em, 1.2vw, 1.8em);
     border-bottom: 2px solid #8d8d8d;
     background: #002147;
-    ;
     background: linear-gradient(139deg, #002147 0%, #878787 35%, white 50%, #878787 65%, #002147 100%);
-    min-height: 68px;
+    min-height: 72px;
+    max-height: 72px;
     border-radius: 6px;
 }
 
 
 
 .card-1-img-container {
-    min-height: 100px;
+    min-height: 102px;
 }
 
 .card-1-img,
@@ -272,7 +280,7 @@ footer {
 .card-1-p-container,
 .card-2-p-container,
 .card-3-p-container {
-    display: flex;
+    display: block;
 }
 
 .card-1-p,
@@ -280,6 +288,8 @@ footer {
 .card-3-p {
     color: white;
     padding: 10px;
+    font-size: clamp(1.2em, 1.2vw, 1.8em);
+    text-shadow: 2px 2px 2px black;
 }
 
 /*=========SOCIAL MEDIA==========
@@ -300,6 +310,7 @@ footer {
 .social-link {
     padding: 1rem;
     color: #002147;
+    font-size: clamp(3em, 3vw, 6em);
     text-shadow: 2px 2px 2px white, -1px 2px 1px white, 2px -2px 1px white, 1px 2px 1px white, 2px 1px 1px white, -1px 2px 1px white, 2px -1px 1px white, 1px -2px 1px white, -2px 1px 1px white, -1px -2px 1px white, -2px -1px 1px white, 1px 1px 1px white, -1px -1px 1px white, -1px 1px 1px white, 1px -1px 1px white, 0px 2px 1px white, 2px 0px 1px white, -2px 0px 1px white, 0px -2px 1px white, 0px 1px 1px white, 1px 0px 1px white, 0px -1px 1px white, -1px 0px 1px white, 0px 0px 1px white;
 
 }
@@ -331,16 +342,83 @@ footer {
     transform: rotate(90deg);
 }
 
+.rotate-180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(1800deg);
+    transform: rotate(180deg);
+}
+
 .is-active {
     background-color: rgba(255, 255, 255, 0.2);
     color: #e4c201;
 }
 
+.mh208 {
+    max-height: 208px;
+}
+
+.ha {
+    height: auto;
+}
+
+.fa-sort-down, .fa-sort-up {
+    color: white;
+    /* display: none; */
+}
+
+.fa-sort-up {
+    position: absolute;
+    bottom: 0.5em;
+    margin-right: 10em;
+    display: none;
+}
+
+.learn-more-text {
+    color: white;
+    /* margin-bottom: -1px; */
+}
+
+.learn-more-icon-container {
+    display: none;
+    cursor: pointer;
+    font-size: 12px;
+    height: 30px;
+    width: fit-content;
+    margin: auto;
+}
+
 /*=========MEDIA Qs==========
 =================================
 ===============================*/
+@media screen and (max-width: 600px) {
+    /* .card-1-container, .card-2-container, .card-3-container {
+        max-height: 208px;
+    } */
+
+    .card-1-p,
+    .card-2-p,
+    .card-3-p {
+        display: none;
+        text-shadow: none;
+    }
+
+    .learn-more-icon-container {
+        display: block;
+    }
+}
+
 
 @media screen and (max-width: 470px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .page-container {
+        grid-gap: 1em;
+    }
+
     .top-title-container {
         display: block;
         text-align: center;
@@ -364,6 +442,10 @@ footer {
         margin: 0;
     }
 
+    .main-title-container {
+        margin-bottom: 1em;
+    }
+
     .cards-container {
         display: block;
     }
@@ -374,9 +456,19 @@ footer {
         min-width: 80%;
         margin: 0 auto 1em auto;
     }
+
+    .card-1-title-container,
+    .card-2-title-container,
+    .card-3-title-container {
+        min-height: 34px;
+        max-height: 34px;
+    }
+
+
 }
 
 @media screen and (min-width: 471px) {
+
     .whisker-menu-links-container {
         display: none;
         padding: 0;
@@ -399,4 +491,11 @@ footer {
     .top-title {
         font-size: 2.3em;
     }
+}
+
+.learn-more-icon-container {
+
+}
+.fa-sort-down, .fa-sort-up {
+    font-size: clamp(1.2em, 1.2vw, 1.8em);
 }
