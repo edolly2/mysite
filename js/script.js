@@ -11,6 +11,7 @@ var p1 = $('.p1');
 var p2 = $('.p2');
 var p3 = $('.p3');
 var learnMore = $('.learn-more-icon-container');
+var mainTitle = $('.main-title-container');
 
 
 $(window).resize(() => {
@@ -92,9 +93,10 @@ $(smallNavLink).click((event) => {
 });
 
 $(window).on('load', () => {
-    $(card1).delay(2000).fadeIn(3000);
-    $(card2).delay(5000).fadeIn(3000);
-    $(card3).delay(8000).fadeIn(3000);
+    $(mainTitle).delay(2000).fadeIn(3000)
+    $(card1).delay(5000).fadeIn(3000);
+    $(card2).delay(8000).fadeIn(3000);
+    $(card3).delay(11000).fadeIn(3000);
 });
 
 // if($('.card-1-p').is(!'visible:')){
