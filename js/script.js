@@ -99,32 +99,65 @@ $(window).on('load', () => {
     $(card3).delay(11000).fadeIn(3000);
 });
 
-// if($('.card-1-p').is(!'visible:')){
-//     $('.card-1-p').addClass('mh208');
-// }
-// }
-// else {
-//     $('.cc').removeClass('mh208');
+// if($('.cp1').is(!'visible:')){
+//     $('.fsd1').removeClass('rotate-180');
 // }
 
+// if($('.cp2').is(!'visible:')){
+//     $('.fsd2').removeClass('rotate-180');
+// }
+
+// if($('.cp3').is(!'visible:')){
+//     $('.fsd3').removeClass('rotate-180');
+// }
+
+
+
 $(learnMore).on('click', (event) => {
-    $('.cc').addClass('mh208');
+    // $('.fa-sort-down').removeClass('rotate-180');
+    $('.cp').hide();
     if($(event.currentTarget).hasClass('p1')) {
         $('.card-1-container').toggleClass('mh208');
-        $('.card-1-p').toggle();
+        $('.card-2-container').addClass('mh208');
+        $('.card-3-container').addClass('mh208');
+        $('.card-1-p').show();
+        $('.card-2-p').hide();
+        $('.card-3-p').hide();
         $('.fsd1').toggleClass('rotate-180');
+        // $('.fsd2').removeClass('rotate-180');
+        // $('.fsd3').removeClass('rotate-180');
     }
     else if($(event.currentTarget).hasClass('p2')) {
         $('.card-2-container').toggleClass('mh208');
+        $('.card-1-container').addClass('mh208');
+        $('.card-3-container').addClass('mh208');
         $('.card-2-p').toggle();
+        $('.card-1-p').hide();
+        $('.card-3-p').hide();
         $('.fsd2').toggleClass('rotate-180');
+        // $('.fsd1').removeClass('rotate-180');
+        // $('.fsd3').removeClass('rotate-180');
     }
     else if($(event.currentTarget).hasClass('p3')) {
         $('.card-3-container').toggleClass('mh208');
+        $('.card-2-container').addClass('mh208');
+        $('.card-1-container').addClass('mh208');
         $('.card-3-p').toggle();
+        $('.card-2-p').hide();
+        $('.card-1-p').hide();
         $('.fsd3').toggleClass('rotate-180');
+        // $('.fsd2').removeClass('rotate-180');
+        // $('.fsd1').removeClass('rotate-180');
+    }
+    else {
+        $('.fsd1').removeClass('rotate-180');
+        $('.fsd2').removeClass('rotate-180');
+        $('.fsd3').removeClass('rotate-180');
     }
 });
+// if($('.cc').is('visible:')) {
+//     $('.fsd1').addClass('rotate-180');
+// }
 
 if($(window).width() > 600) {
     $('.cp').show();

@@ -25,7 +25,7 @@ img {
 }
 
 body {
-    background-image: url('../assets/images/marble.png');
+    background-image: url('../assets/images/marble3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,9 +76,9 @@ main {
 footer {
     grid-area: footer;
     width: calc(100% - 2em);
-    margin: auto;
+    margin: 0 auto 1em auto;
     border: 2px solid #002147;
-    background-color: #8d8d8d;
+    background-color: rgba(141, 141, 141, 0.8);
     color: #002147;
     box-shadow: 2px 2px 5px black;
     text-shadow: 2px 2px 2px #ffffff, -2px 2px 2px #ffffff, 2px -2px 2px #ffffff, 1px 2px 2px #ffffff, 2px 1px 2px #ffffff, -1px 2px 2px #ffffff, 2px -1px 2px #ffffff, 1px -2px 2px #ffffff, -2px 1px 2px #ffffff, -1px -2px 2px #ffffff, -2px -1px 2px #ffffff, 1px 1px 2px #ffffff, -1px -1px 2px #ffffff, -1px 1px 2px #ffffff, 1px -1px 2px #ffffff, 0px 2px 2px #ffffff, 2px 0px 2px #ffffff, -2px 0px 2px #ffffff, 0px -2px 2px #ffffff, 0px 1px 2px #ffffff, 1px 0px 2px #ffffff, 0px -1px 2px #ffffff, -1px 0px 2px #ffffff, 0px 0px 2px #ffffff, 3px 3px 3px black;
@@ -112,7 +112,7 @@ footer {
 
 .top-title {
     /* background-color: #002147; */
-    color: #01438f;
+    color: #8d8d8d;
     white-space: nowrap;
     font-size: clamp(2.6em, 3.5vw, 5em);
     margin-bottom: 0.5rem;
@@ -368,7 +368,8 @@ footer {
     height: auto;
 }
 
-.fa-sort-down, .fa-sort-up {
+.fa-sort-down,
+.fa-sort-up {
     color: white;
     /* display: none; */
 }
@@ -409,8 +410,26 @@ footer {
         text-shadow: none;
     }
 
+    .copy-container {
+        display: none;
+    }
+
+   
+
     .learn-more-icon-container {
         display: block;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .bottom-getintouch-title {
+        display: none;
+    }
+    .bottom-nav-container {
+        display: none;
+    }
+    .wwwdolly {
+        display: none;
     }
 }
 
@@ -469,6 +488,9 @@ footer {
         max-height: 34px;
     }
 
+    .social-link {
+        padding: 0.3em;
+    }
 
 }
 
@@ -492,15 +514,54 @@ footer {
     }
 }
 
+@media screen and (max-width: 400px) {
+    footer {
+        display: block;
+        text-align: center;
+    }
+
+    .social-container {
+        width: 60%;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .top-title {
         font-size: 2.3em;
     }
 }
 
-.learn-more-icon-container {
+.learn-more-icon-container {}
 
-}
-.fa-sort-down, .fa-sort-up {
+.fa-sort-down,
+.fa-sort-up {
     font-size: clamp(1.2em, 1.2vw, 1.8em);
+}
+
+.copy-container {
+    padding: 10px;
+}
+
+.bottom-nav-container {
+    padding: 10px;
+}
+
+.bottom-nav-container nav li {
+    padding: 2px 0;
+}
+
+.bottom-getintouch-container {
+    padding: 10px 20px;
+}
+
+.bottom-getintouch-title {
+    padding: 0 0 10px 0;
+}
+
+.getintouch-phone,
+.getintouch-email {
+    padding: 0 0 5px;
+    text-shadow: none;
+    font-weight: bold;
 }
